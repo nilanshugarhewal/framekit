@@ -1,0 +1,111 @@
+@use "../../scss/variables" as var;
+@use "../../scss/functions" as *;
+
+.bottom-bar {
+  width: 100%;
+  height: auto;
+  padding: 1rem 14rem;
+
+  position: sticky;
+  top: 0;
+
+  background-color: var.$secondary;
+  border-bottom: 1px solid var.$border-hover;
+
+  .bar-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: get-space("md");
+
+    .email-bar {
+      width: auto;
+      height: 100%;
+      background-color: var.$secondary-accent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: get-space("md");
+      padding: get-space("sm");
+      padding-left: get-space("md");
+      border-radius: 999px;
+      border: 1px solid var.$border-hover;
+
+      p {
+        font-size: 0.9rem;
+        color: var.$primary-accent;
+      }
+
+      .mail-icon {
+        font-size: 1.2rem;
+        color: var.$primary-accent;
+      }
+
+      .notification-icon {
+        font-size: 1.2rem;
+        color: var.$secondary-accent;
+        background-color: #fff;
+        padding: get-space("sm");
+        border-radius: 50%;
+      }
+    }
+
+    .search-bar {
+      height: 100%;
+      background-color: var.$secondary-accent;
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      gap: get-space("lg");
+      padding: get-space("md");
+      border-radius: 999px;
+      border: 1px solid var.$border-hover;
+
+      #search-icon {
+        font-size: 1.2rem;
+        color: var.$primary-accent;
+      }
+
+      .search {
+        width: 100%;
+        height: auto;
+        border: none;
+        outline: none;
+        background: none;
+        font-family: "Google Sans Flex", sans-serif;
+        color: var.$primary;
+        font-size: 1rem;
+      }
+
+      #search-shorthand {
+        font-size: 0.8rem;
+        color: var.$primary-accent;
+      }
+    }
+
+    .filter-bar {
+      width: auto;
+      height: 100%;
+      background-color: var.$secondary-accent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: get-space("md");
+      padding: get-space("md");
+      border-radius: 999px;
+      border: 1px solid var.$border-hover;
+
+      .filter-icon {
+        font-size: 1.2rem;
+        color: var.$primary-accent;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: var.$primary-accent;
+      }
+    }
+  }
+}

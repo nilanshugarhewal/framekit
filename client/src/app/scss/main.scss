@@ -1,0 +1,30 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+:root {
+  font-family: "Google Sans Flex", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $secondary;
+  color: $primary;
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #fff;
+  color: #000;
+}
+
+::-moz-selection {
+  background-color: #fff;
+  color: #000;
+}

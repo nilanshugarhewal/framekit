@@ -1,0 +1,22 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id          String   @id @default(uuid())
+  imageUrl    String
+  username    String
+  heading     String
+  description String?
+  information String
+  socials     Json?
+  createdAt   DateTime @default(now())
+
+  @@map("framekitdata")
+}
+

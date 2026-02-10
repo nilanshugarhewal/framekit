@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "./variables" as *;
+
+@function get-space($key) {
+  @if map.has-key($sizing-scale, $key) {
+    @return map.get($sizing-scale, $key);
+  }
+
+  @error "❌ Unknown spacing key: #{$key}. Use one of: #{map.keys($sizing-scale)}";
+}

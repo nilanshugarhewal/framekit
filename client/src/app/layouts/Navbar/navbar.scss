@@ -1,0 +1,112 @@
+@use "../../scss/variables" as var;
+@use "../../scss/functions" as *;
+
+.navbar {
+  width: 100%;
+  height: auto;
+
+  padding: get-space("md");
+
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: get-space("sm");
+  right: 0;
+
+  z-index: 10000;
+
+  .brand-logo {
+    .brand-text {
+      color: var.$primary;
+      background-color: black;
+      padding: get-space("sm") get-space("md");
+      border: 1px solid var.$border;
+      border-radius: 999px;
+    }
+  }
+
+  .navbar-container {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: get-space("md");
+
+    .navbar-box {
+      width: auto;
+      height: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: get-space("sm");
+
+      cursor: pointer;
+
+      .navbar-text {
+        font-size: 1.15rem;
+        font-weight: 500;
+        display: inline-block;
+        color: var.$primary-accent;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-line-container {
+        width: auto;
+        height: auto;
+        display: flex;
+
+        .navbar-line {
+          width: 8px;
+          height: 1.5px;
+          background-color: var.$border-hover;
+          transition:
+            background-color 0.3s ease,
+            transform 0.3s ease;
+        }
+      }
+
+      &:hover {
+        .navbar-text {
+          color: var.$primary;
+        }
+
+        .navbar-line {
+          background-color: var.$primary;
+        }
+
+        .navbar-line-left {
+          transform: rotate(-30deg);
+        }
+
+        .navbar-line-right {
+          transform: rotate(30deg);
+        }
+      }
+    }
+
+    .active-nav {
+      .navbar-text {
+        color: var.$primary;
+      }
+
+      .navbar-line-container {
+        .navbar-line {
+          background-color: var.$primary;
+        }
+
+        .navbar-line-left {
+          transform: rotate(-30deg);
+        }
+
+        .navbar-line-right {
+          transform: rotate(30deg);
+        }
+      }
+    }
+  }
+}

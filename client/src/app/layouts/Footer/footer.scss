@@ -1,0 +1,22 @@
+@use "../../scss/functions" as *;
+@use "../../scss/variables" as var;
+
+.footer {
+    width: 100vw;
+    height: auto;
+    padding: get-space("4xl") 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var.$border-hover;
+    // background-color: red;
+
+    p {
+        font-size: 1.1rem;
+        font-weight: 500;
+
+        span {
+            color: var.$primary-accent;
+        }
+    }
+}
