@@ -5,6 +5,7 @@ import "./scss/main.scss";
 const googleSansFlex = Google_Sans_Flex({
   variable: "--font-google-sans-flex",
   subsets: ["latin"],
+  fallback: ["system-ui", "Arial", "sans-serif"],
   display: "swap",
 });
 
@@ -12,6 +13,7 @@ const meowScript = Caveat({
   variable: "--font-caveat",
   weight: "400",
   subsets: ["latin"],
+  fallback: ["system-ui", "Arial", "sans-serif"],
   display: "swap",
 });
 

@@ -1,6 +1,6 @@
 // styles
 import "./content_section.scss";
-import "./card.scss"
+import "./card.scss";
 
 // types
 type Post = {
@@ -27,8 +27,10 @@ const Card = ({ post }: { post: Post }) => (
 
     <div className="card-details">
       <p className="card-title">{post.heading}</p>
-      {post.description || (
-        <p className="card-description">{post.description}</p>
+      {post.description && (
+        <p className="card-description">
+          {post.description || post.information}
+        </p>
       )}
       <span className="card-admin">@{post.username}</span>
     </div>
