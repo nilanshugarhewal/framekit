@@ -39,11 +39,6 @@ const Card = ({ post }: { post: Post }) => (
 
 // Main Component
 export const ContentSection = ({ posts }: ContentSectionProps) => {
-  const postsPerBox = 2;
-  const contentBoxes = Array.from({ length: 3 }, (_, i) =>
-    posts.slice(i * postsPerBox, (i + 1) * postsPerBox),
-  );
-
   if (posts.length === 0) {
     return (
       <div className="content-section">
@@ -57,14 +52,11 @@ export const ContentSection = ({ posts }: ContentSectionProps) => {
   return (
     <div className="content-section">
       <div className="content-container">
-        {contentBoxes.map((boxPosts, index) => (
-          <div key={index} className={`content-box-${index + 1} content-box`}>
-            {boxPosts.map((post) => (
-              <Card key={post.id} post={post} />
-            ))}
-          </div>
+        {posts.map((post) => (
+          <Card key={post.id} post={post} />
         ))}
       </div>
     </div>
   );
 };
+

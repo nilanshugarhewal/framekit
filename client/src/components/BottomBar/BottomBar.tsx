@@ -24,12 +24,12 @@ export const BottomBar = () => {
           <p id="search-shorthand">Ctrl+K</p>
         </div>
 
-        <div className="filter-bar">
+        {/* <div className="filter-bar">
           <span className="material-symbols-rounded filter-icon icon">
             filter_alt
           </span>
           <p>Filter</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

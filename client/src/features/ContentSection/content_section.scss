@@ -9,17 +9,6 @@
   .content-container {
     width: 100%;
     height: auto;
-    // background-color: red;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: get-space("lg");
-
-    .content-box {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      gap: get-space("lg");
-    }
+    columns: 300px;
   }
 }
