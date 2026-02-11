@@ -1,0 +1,57 @@
+// This is the main.scss file which is used for the main styling of the whole website.
+// Don't alter or change the file until it is necessary.
+
+@use "@/styles/variables" as var;
+@use "@/styles/functions" as *;
+
+:root {
+  font-family: "Google Sans Flex", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var.$secondary;
+  color: var.$primary;
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+}
+
+// --------------------------------------------->
+// --------------------------------------------->
+// --------------------------------------------->
+
+// Change the color of user selected text.
+::selection {
+  background-color: var.$primary;
+  color: var.$secondary;
+}
+
+::-moz-selection {
+  background-color: #fff;
+  color: #000;
+}
+
+// --------------------------------------------->
+// --------------------------------------------->
+// --------------------------------------------->
+
+// Hide scrollbar for Chrome, Edge, Safari
+*::-webkit-scrollbar {
+  display: none;
+}
+
+// Hide scrollbar for Firefox
+* {
+  scrollbar-width: none;
+}
+
+// Hide scrollbar for IE / old Edge
+* {
+  -ms-overflow-style: none;
+}

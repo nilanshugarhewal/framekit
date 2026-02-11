@@ -1,9 +1,9 @@
 import { getPosts } from "@/lib/api";
-import { ContentSection } from "./components/ContentSection/ContentSection";
-import { HeroSection } from "./components/HeroSection/HeroSection";
-import { Footer } from "./layouts/Footer/Footer";
-import { Navbar } from "./layouts/Navbar/Navbar";
-import { BottomBar } from "./components/BottomBar/BottomBar";
+import { ContentSection } from "@/features/ContentSection/ContentSection";
+import { HeroSection } from "@/features/HeroSection/HeroSection";
+import { Footer } from "@/layouts/Footer/Footer";
+import { Navbar } from "@/layouts/Navbar/Navbar";
+import { BottomBar } from "@/components/BottomBar/BottomBar";
 
 type Post = {
   id: string;

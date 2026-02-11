@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "./variables" as *;
+@use "@/styles/variables" as *;
 
 @function get-space($key) {
   @if map.has-key($sizing-scale, $key) {

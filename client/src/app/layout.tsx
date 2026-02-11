@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Google_Sans_Flex, Caveat } from "next/font/google";
-import "./scss/main.scss";
+import "@/styles/main.scss";
 
 const googleSansFlex = Google_Sans_Flex({
   variable: "--font-google-sans-flex",

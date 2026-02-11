@@ -1,5 +1,5 @@
 // Components
-import { TextBox } from "./components/TextBox";
+import { TextBox } from "./components/TextBox/TextBox";
 
 // Styles
 import "./hero_section.scss";

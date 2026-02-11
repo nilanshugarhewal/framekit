@@ -1,3 +1,3 @@
-1. fixed description styles
-2. added a fallback font - arial
-3. hide the every scrollbar but still able to scroll
+1. Updated the main.scss file.
+2. Changed the path of the files of SCSS folder, Features folder, Components folder. 
+3. I also created a new feature folder instead of storing hero section and content section in a components folder inside the app section. 
