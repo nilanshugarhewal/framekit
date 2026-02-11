@@ -1,4 +1,4 @@
-import prisma from "../prisma";
+import prisma from "../../config/prisma";
 
 export const createPost = async (req: any, res: any) => {
   try {
